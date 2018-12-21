@@ -29,43 +29,6 @@ public class MainActivity extends AppCompatActivity {
         layoutParams=calinputlayout.getLayoutParams();
 
 
-        calinputlayout.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-
-                if (event.getAction()==MotionEvent.ACTION_DOWN){
-
-                    float y=event.getY();
-
-
-
-                    ViewGroup.LayoutParams layoutParams=v.getLayoutParams();
-
-                    
-
-                    v.setLayoutParams(layoutParams);
-
-
-
-
-
-
-                }
-                if (event.getAction()==MotionEvent.ACTION_MOVE){
-
-                    float y=event.getY();
-
-
-                    layoutParams.height=Integer.getInteger(String.valueOf(y));
-
-                    calinputlayout.setLayoutParams(layoutParams);
-
-                }
-
-
-                return true;
-            }
-        });
 
     }
 }
