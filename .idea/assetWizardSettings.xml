@@ -16,27 +16,12 @@
                             <entry key="launcherLegacy">
                               <value>
                                 <PersistentState>
-                                  <option name="children">
-                                    <map>
-                                      <entry key="textAsset">
-                                        <value>
-                                          <PersistentState>
-                                            <option name="values">
-                                              <map>
-                                                <entry key="fontFamily" value="SansSerif" />
-                                                <entry key="text" value="0" />
-                                              </map>
-                                            </option>
-                                          </PersistentState>
-                                        </value>
-                                      </entry>
-                                    </map>
-                                  </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="assetType" value="TEXT" />
+                                      <entry key="assetType" value="IMAGE" />
                                       <entry key="iconShape" value="NONE" />
-                                      <entry key="outputName" value="numZero" />
+                                      <entry key="imageAsset" value="F:\Cushy icons\Equals\Typicons_e066(0)_1024.png" />
+                                      <entry key="outputName" value="equals" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -72,7 +57,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/content/ic_clear_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/av/ic_pause_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -82,8 +67,10 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_clear_black_24dp" />
-                            <entry key="sourceFile" value="C:\Users\Office" />
+                            <entry key="color" value="006df0" />
+                            <entry key="outputName" value="ic_pause_black_24dp" />
+                            <entry key="overrideSize" value="true" />
+                            <entry key="sourceFile" value="C:\Users\Office\Downloads\divide.svg" />
                           </map>
                         </option>
                       </PersistentState>
