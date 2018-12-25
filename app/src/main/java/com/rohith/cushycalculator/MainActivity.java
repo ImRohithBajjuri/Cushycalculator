@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView button0, button1, button2, button3, button4, button5, button6,
             button7, button8, button9, buttonAdd, buttonSub, buttonDivision,
-            buttonMul, button10, buttonC, buttonEqual;
+            buttonMul, button10, buttonC;
     EditText EditText;
 
     float mValueOne, mValueTwo;
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (inputminimizer.isChecked()){
-                    calinputlayout.setVisibility(View.GONE);
+                    inputLayout.setVisibility(View.GONE);
 
                     inputcard.setLayoutParams(layoutParams2);
 
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 else {
-                    calinputlayout.setVisibility(View.VISIBLE);
+                    inputLayout.setVisibility(View.VISIBLE);
                     inputcard.setLayoutParams(layoutParams);
 
                 }
@@ -117,11 +117,12 @@ public class MainActivity extends AppCompatActivity {
         button10=findViewById(R.id.dot);
         buttonMul =findViewById(R.id._multiply);
         buttonDivision =findViewById(R.id.divide);
-        buttonEqual =findViewById(R.id._equals);
+
         buttonAdd =findViewById(R.id._plus);
         buttonC = findViewById(R.id.back);
         EditText = findViewById(R.id.textView);
 
+        buttonSub=findViewById(R.id._minus);
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -234,32 +235,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        buttonEqual.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mValueTwo = Float.parseFloat(EditText.getText() + "");
 
-                if (Addition == true) {
-                    EditText.setText(mValueOne + mValueTwo + "");
-                    Addition = false;
-                }
-
-                if (mSubtract == true) {
-                    EditText.setText(mValueOne - mValueTwo + "");
-                    mSubtract = false;
-                }
-
-                if (Multiplication == true) {
-                    EditText.setText(mValueOne * mValueTwo + "");
-                   Multiplication = false;
-                }
-
-                if (Division == true) {
-                   EditText.setText(mValueOne / mValueTwo + "");
-                   Division = false;
-                }
-            }
-        });
 
         buttonC.setOnClickListener(new View.OnClickListener() {
             @Override
