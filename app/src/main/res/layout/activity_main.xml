@@ -90,7 +90,6 @@
            >
 
 
-
            <LinearLayout
                android:layout_width="match_parent"
                android:layout_height="match_parent"
@@ -114,7 +113,9 @@
                        android:gravity="center"
                        android:text="7"
                        android:textColor="@color/black"
-                       android:textSize="32sp" />
+                       android:textSize="32sp"
+                       android:clickable="true"
+                       android:focusable="true" />
 
                    <TextView
                        android:id="@+id/num8"
@@ -125,7 +126,9 @@
                        android:gravity="center"
                        android:text="8"
                        android:textColor="@color/black"
-                       android:textSize="32sp" />
+                       android:textSize="32sp"
+                       android:clickable="true"
+                       android:focusable="true"/>
 
                    <TextView
                        android:id="@+id/num9"
@@ -136,7 +139,9 @@
                        android:gravity="center"
                        android:text="9"
                        android:textColor="@color/black"
-                       android:textSize="32sp" />
+                       android:textSize="32sp"
+                       android:clickable="true"
+                       android:focusable="true"/>
 
                </LinearLayout>
 
@@ -157,7 +162,9 @@
                        android:gravity="center"
                        android:text="4"
                        android:textColor="@color/black"
-                       android:textSize="32sp" />
+                       android:textSize="32sp"
+                       android:clickable="true"
+                       android:focusable="true"/>
 
                    <TextView
                        android:id="@+id/num5"
@@ -168,7 +175,9 @@
                        android:gravity="center"
                        android:text="5"
                        android:textColor="@color/black"
-                       android:textSize="32sp" />
+                       android:textSize="32sp"
+                       android:clickable="true"
+                       android:focusable="true"/>
 
                    <TextView
                        android:id="@+id/num6"
@@ -179,7 +188,9 @@
                        android:gravity="center"
                        android:text="6"
                        android:textColor="@color/black"
-                       android:textSize="32sp" />
+                       android:textSize="32sp"
+                       android:clickable="true"
+                       android:focusable="true"/>
 
                </LinearLayout>
 
@@ -202,7 +213,9 @@
                        android:gravity="center"
                        android:text="1"
                        android:textColor="@color/black"
-                       android:textSize="32sp" />
+                       android:textSize="32sp"
+                       android:clickable="true"
+                       android:focusable="true"/>
 
                    <TextView
                        android:id="@+id/num2"
@@ -213,7 +226,9 @@
                        android:gravity="center"
                        android:text="2"
                        android:textColor="@color/black"
-                       android:textSize="32sp" />
+                       android:textSize="32sp"
+                       android:clickable="true"
+                       android:focusable="true"/>
 
                    <TextView
                        android:id="@+id/num3"
@@ -224,7 +239,9 @@
                        android:gravity="center"
                        android:text="3"
                        android:textColor="@color/black"
-                       android:textSize="32sp" />
+                       android:textSize="32sp"
+                       android:clickable="true"
+                       android:focusable="true"/>
 
                </LinearLayout>
 
@@ -244,7 +261,8 @@
                        android:id="@+id/deletetyped"
                        android:layout_weight="1"
 
-
+                       android:clickable="true"
+                       android:focusable="true"
                        android:src="@drawable/ic_chevron_left_black_24dp"
                        />
 
@@ -257,7 +275,9 @@
                        android:gravity="center"
                        android:text="0"
                        android:textColor="@color/black"
-                       android:textSize="32sp" />
+                       android:textSize="32sp"
+                       android:clickable="true"
+                       android:focusable="true"/>
 
                    <TextView
                        android:id="@+id/dot"
@@ -268,7 +288,9 @@
                        android:gravity="center"
                        android:text="."
                        android:textColor="@color/black"
-                       android:textSize="32sp" />
+                       android:textSize="32sp"
+                       android:clickable="true"
+                       android:focusable="true"/>
 
                </LinearLayout>
 
@@ -281,24 +303,50 @@
 
 
 
-
        </android.support.v7.widget.CardView>
 
 
 
 
-       <android.support.v7.widget.CardView
+
+       <LinearLayout
            android:layout_width="0dp"
            android:layout_height="match_parent"
+
+           android:layout_weight="2"
+           android:animateLayoutChanges="true"
+           android:orientation="vertical">
+
+
+
+
+
+
+       <android.support.v7.widget.CardView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
            android:id="@+id/inputoperatorscard"
            app:cardElevation="6dp"
            app:cardBackgroundColor="@color/white"
            app:cardCornerRadius="10dp"
+           android:layout_weight="1"
+
+
            android:layout_marginEnd="5dp"
-           android:layout_marginBottom="5dp"
+           android:layout_marginBottom="3dp"
            android:layout_marginTop="5dp"
-           android:layout_marginStart="4dp"
-           android:layout_weight="2">
+           android:layout_marginStart="2dp"
+
+
+           android:animateLayoutChanges="true">
+
+
+
+
+
+
+
+
 
 
 
@@ -312,62 +360,65 @@
                    android:id="@+id/inputoperatorslayout">
 
 
-                   <ImageView
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:src="@drawable/ic_add_black_24dp"
-                       android:id="@+id/addvalue"
-                       android:layout_margin="8dp"
-                       android:layout_weight="1"
-                       android:layout_gravity="center"
-
-                       />
-
-
-                   <ImageView
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:src="@drawable/ic_remove_black_24dp"
-                       android:id="@+id/removevalue"
-                       android:layout_margin="8dp"
-                       android:layout_weight="1"
-                       android:layout_gravity="center"
-                       />
 
                    <ImageView
                        android:layout_width="20dp"
-                       android:layout_height="wrap_content"
+                       android:layout_height="0dp"
                        android:src="@drawable/ic_divide"
                        android:id="@+id/dividevalue"
                        android:layout_margin="8dp"
                        android:layout_weight="1"
                        android:layout_gravity="center"
+                       android:clickable="true"
+                       android:focusable="true"
                        />
-
 
 
                    <ImageView
                        android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
+                       android:layout_height="0dp"
                        android:src="@drawable/ic_clear_black_24dp"
                        android:id="@+id/multiplyvalue"
                        android:layout_margin="8dp"
                        android:layout_weight="1"
                        android:layout_gravity="center"
+                       android:clickable="true"
+                       android:focusable="true"
+                       />
+
+
+                   <ImageView
+                       android:layout_width="wrap_content"
+                       android:layout_height="0dp"
+                       android:src="@drawable/ic_add_black_24dp"
+                       android:id="@+id/addvalue"
+                       android:layout_margin="8dp"
+                       android:layout_weight="1"
+                       android:layout_gravity="center"
+                       android:clickable="true"
+                       android:focusable="true"
+                       />
+
+                   <ImageView
+                       android:layout_width="wrap_content"
+                       android:layout_height="0dp"
+                       android:src="@drawable/ic_remove_black_24dp"
+                       android:id="@+id/removevalue"
+                       android:layout_margin="8dp"
+                       android:layout_weight="1"
+                       android:layout_gravity="center"
+                       android:clickable="true"
+                       android:focusable="true"
                        />
 
 
 
-                   <ImageView
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:src="@mipmap/equals"
-                   android:id="@+id/equatevalue"
-                   android:layout_margin="8dp"
-                   android:layout_weight="1"
 
-                       android:layout_gravity="center"
-                       android:tint="@color/blue"/>
+
+
+
+
+
 
 
 
@@ -375,7 +426,40 @@
 
 
 
+
        </android.support.v7.widget.CardView>
+
+
+
+           <android.support.v7.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:cardElevation="6dp"
+               app:cardBackgroundColor="@color/DarkBlue"
+               app:cardCornerRadius="10dp"
+               android:layout_marginEnd="5dp"
+               android:layout_marginBottom="5dp"
+               android:layout_marginTop="3dp"
+               android:layout_marginStart="2dp"
+               android:layout_weight="0"
+               android:id="@+id/inputequatecard"
+               android:clickable="true"
+               android:focusable="true"
+               >
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@mipmap/equals"
+                   android:id="@+id/equatevalue"
+                   android:layout_margin="8dp"
+
+
+                   android:layout_gravity="center"
+                   android:tint="@color/white"/>
+           </android.support.v7.widget.CardView>
+
+
+       </LinearLayout>
 
 
    </LinearLayout>
