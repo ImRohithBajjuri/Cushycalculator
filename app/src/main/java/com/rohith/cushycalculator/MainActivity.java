@@ -16,6 +16,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -23,6 +25,7 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
@@ -34,11 +37,15 @@ public class MainActivity extends AppCompatActivity {
 
     TextView num1,num2,num3,num4,num5,num6,num7,num8,num9,num0,dot;
     ImageView deleteTyped,addvalue,removevalue,dividevalue,multiplyvalue;
-    CardView inputequatecard;
+    CardView inputequatecard,inputoperatorscard,inputnumberscard;
+    LinearLayout inputoperatorsparent,inputnumberslayout;
+    ImageView opensientific,closescientific;
+    RelativeLayout scientificinputlayout;
+
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -65,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
         removevalue=findViewById(R.id.removevalue);
         dividevalue=findViewById(R.id.dividevalue);
         multiplyvalue=findViewById(R.id.multiplyvalue);
+        inputoperatorsparent=findViewById(R.id.inputoperatorsparent);
+        inputnumberslayout=findViewById(R.id.inputnumberslayout);
 
 
 
@@ -72,10 +81,22 @@ public class MainActivity extends AppCompatActivity {
 
         //Cards.
         inputequatecard=findViewById(R.id.inputequatecard);
+        inputoperatorscard=findViewById(R.id.inputoperatorscard);
+        inputnumberscard=findViewById(R.id.inputnumberscard);
 
 
 
 
+        //ImageViews.
+        opensientific=findViewById(R.id.openscientific);
+        closescientific=findViewById(R.id.closescientific);
+
+
+
+
+        //Scientific input layout.
+        scientificinputlayout=findViewById(R.id.scientificInputOptions);
+        scientificinputlayout.setVisibility(View.GONE);
 
 
 
@@ -225,6 +246,15 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        LayoutTransition layoutTransition=new LayoutTransition();
+        layoutTransition.setDuration(100);
+        inputnumberslayout.setLayoutTransition(layoutTransition);
+        scientificinputlayout.setLayoutTransition(layoutTransition);
+
+
+
+
+
 
         //Cards click listeners.
         inputequatecard.setOnClickListener(new View.OnClickListener() {
@@ -233,6 +263,41 @@ public class MainActivity extends AppCompatActivity {
                 clickAnim(inputequatecard);
             }
         });
+
+
+
+
+
+
+        //ImageViews click listeners.
+        opensientific.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                inputnumberslayout.setVisibility(View.GONE);
+                scientificinputlayout.setVisibility(View.VISIBLE);
+
+
+
+            }
+        });
+
+
+
+        closescientific.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                scientificinputlayout.setVisibility(View.GONE);
+                inputnumberslayout.setVisibility(View.VISIBLE);
+
+
+            }
+        });
+
+
+
+
+
+
 
 
 
@@ -254,6 +319,8 @@ public class MainActivity extends AppCompatActivity {
         view.startAnimation(ClickAnimation);
 
     }
+
+
 
 
 

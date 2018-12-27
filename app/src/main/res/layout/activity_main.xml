@@ -65,17 +65,73 @@
     </android.support.constraint.ConstraintLayout>
 
 
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_attach_money_black_24dp"
+                android:layout_margin="10dp"
+                android:id="@+id/openscientific"
+                android:contentDescription="Scientific options"
+                android:clickable="true"
+                android:focusable="true"
+                />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/DarkGrey"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="other options..."
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:textSize="15sp"
+                android:textColor="@color/DarkGrey"
+                />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+
+
    <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:layout_weight="1"
+       android:layout_weight="2"
        android:orientation="horizontal"
+       android:animateLayoutChanges="true"
 
        >
 
 
        <android.support.v7.widget.CardView
-           android:layout_width="wrap_content"
+           android:layout_width="0dp"
            android:layout_height="match_parent"
            android:id="@+id/inputnumberscard"
            app:cardElevation="6dp"
@@ -85,29 +141,68 @@
            android:layout_marginBottom="5dp"
            android:layout_marginStart="5dp"
            android:layout_marginEnd="4dp"
-           android:layout_weight="6"
+           android:layout_weight="1"
+
+           android:animateLayoutChanges="true"
 
            >
+
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:id="@+id/scientificInputOptions"
+               android:orientation="vertical"
+               android:animateLayoutChanges="true"
+               >
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/ic_arrow_back_black_24dp"
+                   android:layout_margin="10dp"
+                   android:layout_alignParentStart="true"
+                   android:layout_alignParentTop="true"
+                   android:id="@+id/closescientific"
+                   android:contentDescription="close scientific options"
+                   android:clickable="true"
+                   android:focusable="true" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Scientific input (to be added) "
+                   android:textColor="@color/DarkGrey"
+                   android:textSize="20sp"
+                   android:fontFamily="@font/roboto_medium"
+                   android:layout_gravity="center"
+                   android:layout_centerInParent="true"/>
+
+           </RelativeLayout>
+
+
+
+
 
 
            <LinearLayout
                android:layout_width="match_parent"
                android:layout_height="match_parent"
                android:orientation="vertical"
-               android:id="@+id/inputnumberslayout">
+               android:id="@+id/inputnumberslayout"
+               android:animateLayoutChanges="true">
 
                <LinearLayout
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:orientation="horizontal"
-                   android:layout_margin="8dp"
                    android:layout_weight="1"
-                   android:gravity="center">
+                   android:gravity="center"
+                   >
 
                    <TextView
                        android:id="@+id/num7"
                        android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
+                       android:layout_height="match_parent"
                        android:layout_weight="1"
                        android:fontFamily="@font/roboto_medium"
                        android:gravity="center"
@@ -115,12 +210,13 @@
                        android:textColor="@color/black"
                        android:textSize="32sp"
                        android:clickable="true"
-                       android:focusable="true" />
+                       android:focusable="true"
+                       android:background="?selectableItemBackground"/>
 
                    <TextView
                        android:id="@+id/num8"
                        android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
+                       android:layout_height="match_parent"
                        android:layout_weight="1"
                        android:fontFamily="@font/roboto_medium"
                        android:gravity="center"
@@ -128,12 +224,13 @@
                        android:textColor="@color/black"
                        android:textSize="32sp"
                        android:clickable="true"
-                       android:focusable="true"/>
+                       android:focusable="true"
+                       android:background="?selectableItemBackground"/>
 
                    <TextView
                        android:id="@+id/num9"
                        android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
+                       android:layout_height="match_parent"
                        android:layout_weight="1"
                        android:fontFamily="@font/roboto_medium"
                        android:gravity="center"
@@ -141,7 +238,8 @@
                        android:textColor="@color/black"
                        android:textSize="32sp"
                        android:clickable="true"
-                       android:focusable="true"/>
+                       android:focusable="true"
+                       android:background="?selectableItemBackground"/>
 
                </LinearLayout>
 
@@ -149,14 +247,14 @@
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:orientation="horizontal"
-                   android:layout_margin="8dp"
+
                    android:layout_weight="1"
                    android:gravity="center">
 
                    <TextView
                        android:id="@+id/num4"
                        android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
+                       android:layout_height="match_parent"
                        android:layout_weight="1"
                        android:fontFamily="@font/roboto_medium"
                        android:gravity="center"
@@ -164,12 +262,13 @@
                        android:textColor="@color/black"
                        android:textSize="32sp"
                        android:clickable="true"
-                       android:focusable="true"/>
+                       android:focusable="true"
+                       android:background="?selectableItemBackground"/>
 
                    <TextView
                        android:id="@+id/num5"
                        android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
+                       android:layout_height="match_parent"
                        android:layout_weight="1"
                        android:fontFamily="@font/roboto_medium"
                        android:gravity="center"
@@ -177,12 +276,13 @@
                        android:textColor="@color/black"
                        android:textSize="32sp"
                        android:clickable="true"
-                       android:focusable="true"/>
+                       android:focusable="true"
+                       android:background="?selectableItemBackground"/>
 
                    <TextView
                        android:id="@+id/num6"
                        android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
+                       android:layout_height="match_parent"
                        android:layout_weight="1"
                        android:fontFamily="@font/roboto_medium"
                        android:gravity="center"
@@ -190,7 +290,8 @@
                        android:textColor="@color/black"
                        android:textSize="32sp"
                        android:clickable="true"
-                       android:focusable="true"/>
+                       android:focusable="true"
+                       android:background="?selectableItemBackground"/>
 
                </LinearLayout>
 
@@ -200,14 +301,14 @@
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:orientation="horizontal"
-                   android:layout_margin="8dp"
+
                    android:layout_weight="1"
                    android:gravity="center">
 
                    <TextView
                        android:id="@+id/num1"
                        android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
+                       android:layout_height="match_parent"
                        android:layout_weight="1"
                        android:fontFamily="@font/roboto_medium"
                        android:gravity="center"
@@ -215,12 +316,13 @@
                        android:textColor="@color/black"
                        android:textSize="32sp"
                        android:clickable="true"
-                       android:focusable="true"/>
+                       android:focusable="true"
+                       android:background="?selectableItemBackground"/>
 
                    <TextView
                        android:id="@+id/num2"
                        android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
+                       android:layout_height="match_parent"
                        android:layout_weight="1"
                        android:fontFamily="@font/roboto_medium"
                        android:gravity="center"
@@ -228,12 +330,13 @@
                        android:textColor="@color/black"
                        android:textSize="32sp"
                        android:clickable="true"
-                       android:focusable="true"/>
+                       android:focusable="true"
+                       android:background="?selectableItemBackground"/>
 
                    <TextView
                        android:id="@+id/num3"
                        android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
+                       android:layout_height="match_parent"
                        android:layout_weight="1"
                        android:fontFamily="@font/roboto_medium"
                        android:gravity="center"
@@ -241,7 +344,8 @@
                        android:textColor="@color/black"
                        android:textSize="32sp"
                        android:clickable="true"
-                       android:focusable="true"/>
+                       android:focusable="true"
+                       android:background="?selectableItemBackground"/>
 
                </LinearLayout>
 
@@ -250,14 +354,14 @@
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:orientation="horizontal"
-                   android:layout_margin="8dp"
+
                    android:layout_weight="1"
                    android:gravity="center">
 
                    <ImageView
                        android:layout_width="0dp"
                        android:layout_height="wrap_content"
-                       android:text="1"
+
                        android:id="@+id/deletetyped"
                        android:layout_weight="1"
 
@@ -269,7 +373,7 @@
                    <TextView
                        android:id="@+id/num0"
                        android:layout_width="0dp"
-                       android:layout_height="wrap_content"
+                       android:layout_height="match_parent"
                        android:layout_weight="1"
                        android:fontFamily="@font/roboto_medium"
                        android:gravity="center"
@@ -277,12 +381,13 @@
                        android:textColor="@color/black"
                        android:textSize="32sp"
                        android:clickable="true"
-                       android:focusable="true"/>
+                       android:focusable="true"
+                       android:background="?selectableItemBackground"/>
 
                    <TextView
                        android:id="@+id/dot"
                        android:layout_width="0dp"
-                       android:layout_height="wrap_content"
+                       android:layout_height="match_parent"
                        android:layout_weight="1"
                        android:fontFamily="@font/roboto_medium"
                        android:gravity="center"
@@ -290,7 +395,8 @@
                        android:textColor="@color/black"
                        android:textSize="32sp"
                        android:clickable="true"
-                       android:focusable="true"/>
+                       android:focusable="true"
+                       android:background="?selectableItemBackground"/>
 
                </LinearLayout>
 
@@ -310,12 +416,13 @@
 
 
        <LinearLayout
-           android:layout_width="0dp"
+           android:layout_width="wrap_content"
            android:layout_height="match_parent"
 
-           android:layout_weight="2"
+
            android:animateLayoutChanges="true"
-           android:orientation="vertical">
+           android:orientation="vertical"
+           android:id="@+id/inputoperatorsparent">
 
 
 
@@ -352,63 +459,71 @@
 
 
 
-
                <LinearLayout
                    android:layout_width="match_parent"
                    android:layout_height="match_parent"
                    android:orientation="vertical"
-                   android:id="@+id/inputoperatorslayout">
+                   android:id="@+id/inputoperatorslayout"
+                   android:animateLayoutChanges="true">
 
 
 
                    <ImageView
-                       android:layout_width="20dp"
+                       android:layout_width="match_parent"
                        android:layout_height="0dp"
                        android:src="@drawable/ic_divide"
                        android:id="@+id/dividevalue"
-                       android:layout_margin="8dp"
+                       android:background="?selectableItemBackground"
+
                        android:layout_weight="1"
                        android:layout_gravity="center"
                        android:clickable="true"
                        android:focusable="true"
-                       />
+                       android:scaleType="center"
+                       android:maxWidth="20dp"
+                          />
 
 
                    <ImageView
-                       android:layout_width="wrap_content"
+                       android:layout_width="match_parent"
                        android:layout_height="0dp"
                        android:src="@drawable/ic_clear_black_24dp"
                        android:id="@+id/multiplyvalue"
-                       android:layout_margin="8dp"
+                       android:background="?selectableItemBackground"
+
                        android:layout_weight="1"
                        android:layout_gravity="center"
                        android:clickable="true"
                        android:focusable="true"
+                       android:scaleType="center"
                        />
 
 
                    <ImageView
-                       android:layout_width="wrap_content"
+                       android:layout_width="match_parent"
                        android:layout_height="0dp"
                        android:src="@drawable/ic_add_black_24dp"
                        android:id="@+id/addvalue"
-                       android:layout_margin="8dp"
+                      android:background="?selectableItemBackground"
                        android:layout_weight="1"
                        android:layout_gravity="center"
                        android:clickable="true"
                        android:focusable="true"
+                       android:scaleType="center"
                        />
 
                    <ImageView
-                       android:layout_width="wrap_content"
+                       android:layout_width="match_parent"
                        android:layout_height="0dp"
                        android:src="@drawable/ic_remove_black_24dp"
                        android:id="@+id/removevalue"
-                       android:layout_margin="8dp"
+                       android:background="?selectableItemBackground"
+
                        android:layout_weight="1"
                        android:layout_gravity="center"
                        android:clickable="true"
                        android:focusable="true"
+                       android:scaleType="center"
                        />
 
 
