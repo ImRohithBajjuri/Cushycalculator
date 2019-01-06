@@ -163,43 +163,246 @@
            >
 
 
-           <RelativeLayout
+           <LinearLayout
                android:layout_width="match_parent"
                android:layout_height="match_parent"
                android:id="@+id/scientificInputOptions"
                android:orientation="vertical"
                android:animateLayoutChanges="true"
                >
-               <ImageView
-                   android:layout_width="wrap_content"
+
+               <LinearLayout
+                   android:layout_width="match_parent"
                    android:layout_height="wrap_content"
-                   android:src="@drawable/ic_arrow_back_black_24dp"
-                   android:layout_margin="10dp"
-                   android:layout_alignParentStart="true"
-                   android:layout_alignParentTop="true"
-                   android:id="@+id/closescientific"
-                   android:contentDescription="close scientific options"
-                   android:clickable="true"
-                   android:focusable="true" />
+                   android:orientation="horizontal"
+                   android:layout_weight="1"
+                   android:gravity="center"
 
-               <TextView
-                   android:layout_width="wrap_content"
+                   >
+                   <ImageView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:src="@drawable/ic_arrow_back_black_24dp"
+
+                       android:id="@+id/closescientific"
+                       android:contentDescription="close scientific options"
+                       android:clickable="true"
+                       android:focusable="true"
+                       android:layout_weight="1"
+                       android:gravity="center"/>
+
+
+
+                   <TextView
+                       android:id="@+id/mod"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/roboto_medium"
+                       android:gravity="center"
+                       android:text="mod"
+                       android:textColor="@color/black"
+                       android:textSize="32sp"
+                       android:clickable="true"
+                       android:focusable="true"
+                       android:background="?selectableItemBackground"
+                       android:layout_weight="1"/>
+
+
+                   <TextView
+                       android:id="@+id/pi"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/roboto_medium"
+                       android:gravity="center"
+                       android:text="π"
+                       android:textColor="@color/black"
+                       android:textSize="32sp"
+                       android:clickable="true"
+                       android:focusable="true"
+                       android:background="?selectableItemBackground"
+                       android:layout_weight="1"/>
+
+
+               </LinearLayout>
+
+
+               <LinearLayout
+                   android:layout_width="match_parent"
                    android:layout_height="wrap_content"
-                   android:text="Scientific input (to be added) "
-                   android:textColor="@color/DarkGrey"
-                   android:textSize="20sp"
-                   android:fontFamily="@font/roboto_medium"
-                   android:layout_gravity="center"
-                   android:layout_centerInParent="true"/>
+                   android:orientation="horizontal"
+                   android:layout_weight="1"
+                   android:gravity="center"
+                   >
 
-           </RelativeLayout>
+                   <TextView
+                       android:id="@+id/ln"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/roboto_medium"
+                       android:gravity="center"
+                       android:text="ln"
+                       android:textColor="@color/black"
+                       android:textSize="32sp"
+                       android:clickable="true"
+                       android:focusable="true"
+                       android:background="?selectableItemBackground"
+                       android:layout_weight="1"/>
+
+
+
+                   <TextView
+                       android:id="@+id/log"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/roboto_medium"
+                       android:gravity="center"
+                       android:text="log"
+                       android:textColor="@color/black"
+                       android:textSize="32sp"
+                       android:clickable="true"
+                       android:focusable="true"
+                       android:background="?selectableItemBackground"
+                       android:layout_weight="1"/>
+
+
+                   <TextView
+                       android:id="@+id/exp"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/roboto_medium"
+                       android:gravity="center"
+                       android:text="e^x"
+                       android:textColor="@color/black"
+                       android:textSize="32sp"
+                       android:clickable="true"
+                       android:focusable="true"
+                       android:background="?selectableItemBackground"
+                       android:layout_weight="1"/>
+
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_weight="1"
+                   android:gravity="center"
+                   >
+
+                   <TextView
+                       android:id="@+id/pow10"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/roboto_medium"
+                       android:gravity="center"
+                       android:text="10^x"
+                       android:textColor="@color/black"
+                       android:textSize="32sp"
+                       android:clickable="true"
+                       android:focusable="true"
+                       android:background="?selectableItemBackground"
+                       android:layout_weight="1"/>
+
+
+
+                   <TextView
+                       android:id="@+id/ytox"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/roboto_medium"
+                       android:gravity="center"
+                       android:text="y^x"
+                       android:textColor="@color/black"
+                       android:textSize="32sp"
+                       android:clickable="true"
+                       android:focusable="true"
+                       android:background="?selectableItemBackground"
+                       android:layout_weight="1"/>
+
+
+                   <TextView
+                       android:id="@+id/square"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/roboto_medium"
+                       android:gravity="center"
+                       android:text="x²"
+                       android:textColor="@color/black"
+                       android:textSize="32sp"
+                       android:clickable="true"
+                       android:focusable="true"
+                       android:background="?selectableItemBackground"
+                       android:layout_weight="1"/>
+
+
+               </LinearLayout>
+
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_weight="1"
+                   android:gravity="center"
+                   >
+
+                   <TextView
+                       android:id="@+id/squareroot"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/roboto_medium"
+                       android:gravity="center"
+                       android:text="√"
+                       android:textColor="@color/black"
+                       android:textSize="32sp"
+                       android:clickable="true"
+                       android:focusable="true"
+                       android:background="?selectableItemBackground"
+                       android:layout_weight="1"/>
+
+
+
+                   <TextView
+                       android:id="@+id/reciprocal"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/roboto_medium"
+                       android:gravity="center"
+                       android:text="1/x"
+                       android:textColor="@color/black"
+                       android:textSize="32sp"
+                       android:clickable="true"
+                       android:focusable="true"
+                       android:background="?selectableItemBackground"
+                       android:layout_weight="1"/>
+
+
+                   <TextView
+                       android:id="@+id/fractionalpart"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/roboto_medium"
+                       android:gravity="center"
+                       android:text="frac"
+                       android:textColor="@color/black"
+                       android:textSize="32sp"
+                       android:clickable="true"
+                       android:focusable="true"
+                       android:background="?selectableItemBackground"
+                       android:layout_weight="1"/>
+
+
+               </LinearLayout>
+
+           </LinearLayout>
 
 
 
 
 
 
-           <LinearLayout
+           ↓<LinearLayout
                android:layout_width="match_parent"
                android:layout_height="match_parent"
                android:orientation="vertical"

@@ -12,6 +12,7 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
+import android.text.Html;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.MotionEvent;
@@ -37,6 +38,7 @@ import android.widget.ToggleButton;
 
 import com.udojava.evalex.Expression;
 
+import java.awt.font.TextAttribute;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -49,9 +51,10 @@ public class MainActivity extends AppCompatActivity {
     CardView inputequatecard,inputoperatorscard,inputnumberscard;
     LinearLayout inputoperatorsparent,inputnumberslayout;
     ImageView opensientific,closescientific;
-    RelativeLayout scientificinputlayout;
+    LinearLayout scientificinputlayout;
     EditText displaycalculation;
     TextView showequatedvalue;
+    TextView exp,ytox,pow10;
 
     String calculationtext;
     String enteredvalue="";
@@ -88,6 +91,18 @@ public class MainActivity extends AppCompatActivity {
         multiplyvalue=findViewById(R.id.multiplyvalue);
         inputoperatorsparent=findViewById(R.id.inputoperatorsparent);
         inputnumberslayout=findViewById(R.id.inputnumberslayout);
+
+
+
+
+        //Scientific functions.
+        exp=findViewById(R.id.exp);
+        exp.setText(Html.fromHtml("e<sup>x</sup>"));
+        ytox=findViewById(R.id.ytox);
+        ytox.setText(Html.fromHtml("y<sup>x</sup>"));
+        pow10=findViewById(R.id.pow10);
+        pow10.setText(Html.fromHtml("10<sup>x</sup>"));
+
 
 
 
