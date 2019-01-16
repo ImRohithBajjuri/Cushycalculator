@@ -96,21 +96,24 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_attach_money_black_24dp"
+            <ToggleButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_attach_money_black_24dp"
                 android:layout_margin="10dp"
                 android:id="@+id/openscientific"
                 android:contentDescription="Scientific options"
                 android:clickable="true"
                 android:focusable="true"
+                android:textOn="@null"
+                android:textOff="@null"
+                android:checked="false"
                 />
 
             <View
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:background="@color/DarkGrey"
+                android:background="@color/Grey"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 />
@@ -196,10 +199,10 @@
                    <TextView
                        android:id="@+id/mod"
                        android:layout_width="0dp"
-                       android:layout_height="wrap_content"
+                       android:layout_height="match_parent"
                        android:fontFamily="@font/roboto_medium"
                        android:gravity="center"
-                       android:text="mod"
+                       android:text="Mod"
                        android:textColor="@color/black"
                        android:textSize="25sp"
                        android:clickable="true"
@@ -211,7 +214,7 @@
                    <TextView
                        android:id="@+id/pi"
                        android:layout_width="0dp"
-                       android:layout_height="wrap_content"
+                       android:layout_height="match_parent"
                        android:fontFamily="@font/roboto_medium"
                        android:gravity="center"
                        android:text="π"
@@ -237,7 +240,7 @@
                    <TextView
                        android:id="@+id/ln"
                        android:layout_width="0dp"
-                       android:layout_height="wrap_content"
+                       android:layout_height="match_parent"
                        android:fontFamily="@font/roboto_medium"
                        android:gravity="center"
                        android:text="ln"
@@ -253,7 +256,7 @@
                    <TextView
                        android:id="@+id/log"
                        android:layout_width="0dp"
-                       android:layout_height="wrap_content"
+                       android:layout_height="match_parent"
                        android:fontFamily="@font/roboto_medium"
                        android:gravity="center"
                        android:text="log"
@@ -268,10 +271,10 @@
                    <TextView
                        android:id="@+id/exp"
                        android:layout_width="0dp"
-                       android:layout_height="wrap_content"
+                       android:layout_height="match_parent"
                        android:fontFamily="@font/roboto_medium"
                        android:gravity="center"
-                       android:text="e^x"
+                       android:text="e"
                        android:textColor="@color/black"
                        android:textSize="25sp"
                        android:clickable="true"
@@ -290,29 +293,14 @@
                    android:gravity="center"
                    >
 
-                   <TextView
-                       android:id="@+id/pow10"
-                       android:layout_width="0dp"
-                       android:layout_height="wrap_content"
-                       android:fontFamily="@font/roboto_medium"
-                       android:gravity="center"
-                       android:text="10^x"
-                       android:textColor="@color/black"
-                       android:textSize="25sp"
-                       android:clickable="true"
-                       android:focusable="true"
-                       android:background="?selectableItemBackground"
-                       android:layout_weight="1"/>
-
-
 
                    <TextView
-                       android:id="@+id/ytox"
+                       android:id="@+id/reciprocal"
                        android:layout_width="0dp"
-                       android:layout_height="wrap_content"
+                       android:layout_height="match_parent"
                        android:fontFamily="@font/roboto_medium"
                        android:gravity="center"
-                       android:text="y^x"
+                       android:text="1/x"
                        android:textColor="@color/black"
                        android:textSize="25sp"
                        android:clickable="true"
@@ -322,12 +310,27 @@
 
 
                    <TextView
-                       android:id="@+id/square"
+                       android:id="@+id/paranopen"
                        android:layout_width="0dp"
-                       android:layout_height="wrap_content"
+                       android:layout_height="match_parent"
                        android:fontFamily="@font/roboto_medium"
                        android:gravity="center"
-                       android:text="x²"
+                       android:text="("
+                       android:textColor="@color/black"
+                       android:textSize="25sp"
+                       android:clickable="true"
+                       android:focusable="true"
+                       android:background="?selectableItemBackground"
+                       android:layout_weight="1"/>
+
+
+                   <TextView
+                       android:id="@+id/paranclose"
+                       android:layout_width="0dp"
+                       android:layout_height="match_parent"
+                       android:fontFamily="@font/roboto_medium"
+                       android:gravity="center"
+                       android:text=")"
                        android:textColor="@color/black"
                        android:textSize="25sp"
                        android:clickable="true"
@@ -350,7 +353,7 @@
                    <TextView
                        android:id="@+id/squareroot"
                        android:layout_width="0dp"
-                       android:layout_height="wrap_content"
+                       android:layout_height="match_parent"
                        android:fontFamily="@font/roboto_medium"
                        android:gravity="center"
                        android:text="√"
@@ -362,14 +365,13 @@
                        android:layout_weight="1"/>
 
 
-
                    <TextView
-                       android:id="@+id/reciprocal"
+                       android:id="@+id/fractionalpart"
                        android:layout_width="0dp"
-                       android:layout_height="wrap_content"
+                       android:layout_height="match_parent"
                        android:fontFamily="@font/roboto_medium"
                        android:gravity="center"
-                       android:text="1/x"
+                       android:text="frac"
                        android:textColor="@color/black"
                        android:textSize="25sp"
                        android:clickable="true"
@@ -378,13 +380,14 @@
                        android:layout_weight="1"/>
 
 
+
                    <TextView
-                       android:id="@+id/fractionalpart"
+                       android:id="@+id/superscript"
                        android:layout_width="0dp"
-                       android:layout_height="wrap_content"
+                       android:layout_height="match_parent"
                        android:fontFamily="@font/roboto_medium"
                        android:gravity="center"
-                       android:text="frac"
+                       android:text="^"
                        android:textColor="@color/black"
                        android:textSize="25sp"
                        android:clickable="true"
